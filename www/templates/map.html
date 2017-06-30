@@ -1,10 +1,10 @@
 <ion-view>
   <ion-content>
-    <div id="map" data-tap-disabled="true"></div>
-    <!--<div ng-controller="MapCtrl">-->
-    <div>
-      <button ion-button full primary ng-click="start()">Start Tracking</button>
-      <button ion-button full primary ng-click="stop()">Stop Tracking</button>
+    <!--<div id="map" data-tap-disabled="true"></div>-->
+    <div ng-controller="MapCtrl">
+      <button ng-click="start()">Start Tracking</button>
+      <button ng-click="stop()">Stop Tracking</button>
+      <button ng-click="payPal()">Pay with PayPal</button>
       <h4>Latitude: {{ lat }}</h4>
       <h4>Longitude: {{ lng }}</h4>
     </div>
