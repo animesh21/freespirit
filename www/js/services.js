@@ -154,10 +154,13 @@ angular.module('appConstant', [])
 .constant('shopSettings', {
 
 
-  payPalSandboxId: 'ATgFkBpV9y_XNYKTV9lQwyuBMcJ2kE5BVqT6ZfUJN2ilG8lYvtMNpTLCW68pyjA7xSquxRNdWmiqEv3Y', // sandbox id
-  payPalProductionId: 'AYKActECnLySzCIESTBMtRohlW686GolOQ-mtlxRHPgpB1nzJvjCHGT9cxMRg8vjkXaROE9-XqNuvrfQ',
-  payPalEnv: 'PayPalEnvironmentProduction',   // for testing,  production for production
-  payPalShopName: 'The Free Spirit Project LLC',
+  // payPalSandboxId: 'ATgFkBpV9y_XNYKTV9lQwyuBMcJ2kE5BVqT6ZfUJN2ilG8lYvtMNpTLCW68pyjA7xSquxRNdWmiqEv3Y', // credentials of client
+  // payPalProductionId: 'AYKActECnLySzCIESTBMtRohlW686GolOQ-mtlxRHPgpB1nzJvjCHGT9cxMRg8vjkXaROE9-XqNuvrfQ',
+  payPalSandboxId: 'AWJkdLrWjPVyfWVvfu77uIVueSkgZnYgK1FVu0gp1UJbbPv142DyTd5VBc37spVI65PlC6Lfwgz7fnYa', // sandbox id, my credentials
+  payPalProductionId: 'AYwiLQmAtIQTjAKyKgcQfVbUXGO6GH2DC9F8csfmj3R_gRPYuRVzTA87h-RQ9SBKlRcLvwmyOkgyEJV',
+  payPalEnv: 'PayPalEnvironmentSandbox',   // Sandbox for testing,  Production for production
+  // payPalShopName: 'The Free Spirit Project LLC',
+  payPalShopName: 'TestStore',
   payPalMerchantPrivacyPolicyURL: 'https://www.paypal.com/in/webapps/mpp/ua/privacy-full',
   payPalMerchantUserAgreementURL: 'https://www.paypal.com/us/webapps/mpp/ua/useragreement-full'
 

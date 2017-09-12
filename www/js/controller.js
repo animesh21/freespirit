@@ -31,27 +31,19 @@ angular.module('starter.controllers', [])
   };
 
   $scope.stop = function () {
-    // console.log('Inside stop, watchID: ', $scope.watch_position.watchID);
-    // $cordovaGeolocation.clearWatch($scope.watch_position.watchID);
-    PaypalService.initPaymentUI().then(function () {
-      PaypalService.makePayment($scope.total(), "Total").then(function (value) {
-        console.log(value);
-      }, function (error) {
-        console.error(error);
-      });
-    }, function (error) {
-      console.error(error);
-    });
+    console.log('Inside stop, watchID: ', $scope.watch_position.watchID);
+    $cordovaGeolocation.clearWatch($scope.watch_position.watchID);
   };
 
   $scope.payPal = function () {
     PaypalService.initPaymentUI().then(function () {
       console.log('paypal ui initiated');
       PaypalService.makePayment($scope.total(), "Total").then(function (value) {
-        console.log(value);
+        console.log(JSON.stringify(value));
         var alertPopUp = $ionicPopup.alert({
           title: 'Payment Successful',
-          template: 'Payment ID: ' + value['response']['id']
+          template: 'Payment ID: ' + value['response']['id'] + '\nPayment Status: ' +
+                    value['response']['state']
         });
       }, function (error) {
         console.error(error);
